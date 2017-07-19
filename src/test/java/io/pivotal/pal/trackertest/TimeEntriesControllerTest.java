@@ -21,7 +21,6 @@ public class TimeEntriesControllerTest {
     TimeEntryRepository timeEntryRepository;
     TimeEntriesController controller;
 
-    TimeEntriesController controller;
     CounterService counterService;
     GaugeService gaugeService;
 
