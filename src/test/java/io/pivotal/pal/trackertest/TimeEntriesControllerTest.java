@@ -21,11 +21,19 @@ public class TimeEntriesControllerTest {
     TimeEntryRepository timeEntryRepository;
     TimeEntriesController controller;
 
+    TimeEntriesController controller;
+    CounterService counterService;
+    GaugeService gaugeService;
+
     @Before
     public void setUp() throws Exception {
         timeEntryRepository = mock(TimeEntryRepository.class);
-        controller = new TimeEntriesController(timeEntryRepository);
+        counterService = mock(CounterService.class);
+        gaugeService = mock(GaugeService.class);
+        controller = new TimeEntriesController(timeEntryRepository, counterService, gaugeService);
     }
+
+
 
     @Test
     public void testCreate() throws Exception {
